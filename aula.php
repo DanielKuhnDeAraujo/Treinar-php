@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aula</title>
 </head>
 
 <body>
@@ -15,16 +15,19 @@
         /* Comentário
         de muitas 
         linhas*/
-        /*0
-        echo $_SERVER['HTTP_USER_AGENT'];
-        if (str_contains($_SERVER['HTTP_USER_AGENT'], 'Firefox')) {
-            echo 'Você está usando o Firefox.';
-        }*/
         $a = 2;//int
         $b = 0.0;//float
         $c = "xablau";//string
         $d = 'xablau 2';//string
         $e = null;//nulo
+        $teste = false; // bool
+        //Constante
+        define('MINHA_CONST', "teste");
+        const TESTE = "valor";    
+        // Escrevendo na tela 
+        echo "<p>O valor de a é " . $a . "</p>";
+        echo "<p>O valor de b é $b</p>";
+        print "\t<p>O valor de a + b é " . ($a+$b) ." </p>";
         ?>
 </body>
 
