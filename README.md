@@ -6,3 +6,5 @@ Fiz esse repositório pra colocar meus testes enquanto aprendo php
 [Começo do tutorial](https://www.php.net/manual/pt_BR/tutorial.useful.php)
 
 [Referencia da linguagem](https://www.php.net/manual/pt_BR/langref.php)
+
+[manual](https://www.php.net/manual/en/)
