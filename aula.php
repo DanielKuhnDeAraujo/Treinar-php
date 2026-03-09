@@ -5,7 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Aula</title>
+        <meta name="description" content="">
+        <meta name="keywords" conTent = "">
         <link rel="stylesheet" href="css/exemplo.css">
+        <style>
+            h2 {
+                color: #f00;
+            }
+        </style>
     </head>
 
     <body>
@@ -57,15 +64,40 @@
             ?>
             <h3>SWITCH</h3>
             <?php
-                switch ($variable) {
-                    case 'value':
-                        # code...
+                $a = 6;
+                switch ($a) {
+                    case 1 :
+                        echo "\t<p> O valor é 1!</p>";
+                        break;
+                    case 2 :
+                        echo "\t<p> O valor é 2!</p>";
+                        break;
+                    case 3 :
+                        echo "\t<p> O valor é 3!</p>";
+                        break;
+                    case 4 :
+                        echo "\t<p> O valor é 4!</p>";
+                        break;
+                    case 5 :
+                    case 6 :
+                    case 7 :
+                    case 8 :
+                        echo "\t<p> O valor está entre 5 e 8! </p>";
                         break;
                     
                     default:
-                        # code...
+                        echo "\t<p> O valor é 4!";
                         break;
                 }
+            ?>
+            <h1>Estruturas de repetição</h1>
+            <h2>Do..While</h2>
+            <?php
+                $i =0;
+                do {
+                    echo "\t<p>O valor de \$i é $i</p>";
+                    $i++;
+                } while ($i <= 10);
             ?>
     </body>
 
