@@ -7,6 +7,7 @@
         <title>Aula</title>
         <meta name="description" content="">
         <meta name="keywords" conTent = "">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/exemplo.css">
         <style>
             h2 {
@@ -99,6 +100,28 @@
                     $i++;
                 } while ($i <= 10);
             ?>
+            <h2>While</h2>
+            <?php
+                $i =0;
+                while ($i<=10) {
+                    echo "\t<p>O valor de \$i é $i</p>";
+                    $i++;
+                };
+            ?>
+            <h2>For</h2>
+            <?php
+                $i =0;
+                for ($i=0; $i <=10 ; $i++) { 
+                    echo "\t<p>O valor de \$i é $i</p>";
+                }
+            ?>
+            <h2>Foreach</h2>
+            <?php
+                $vet = ["Zeca","Pedreiro","15997233477"];
+                foreach ($vet as $value) {
+                    echo "\t<p>O valor atual é $value</p>";
+                }
+            ?>
+        <script src="js/bootstrap.bundle.min.js"></script>r
     </body>
-
 </html>

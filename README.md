@@ -8,3 +8,5 @@ Fiz esse repositório pra colocar meus testes enquanto aprendo php
 [Referencia da linguagem](https://www.php.net/manual/pt_BR/langref.php)
 
 [manual](https://www.php.net/manual/en/)
+
+[atual](https://www.php.net/manual/pt_BR/language.types.type-system.php#language.types.type-system.composite.intersection)
