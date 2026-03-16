@@ -117,11 +117,35 @@
             ?>
             <h2>Foreach</h2>
             <?php
-                $vet = ["Zeca","Pedreiro","15997233477"];
+                $vet = ["Zeca","Pedreiro","15997233477"]; 
+                $vet2 = array ("Zeca","Pedreiro","15997233477",123);
+                $vet2[] = "itu";
                 foreach ($vet as $value) {
-                    echo "\t<p>O valor atual é $value</p>";
+                    echo "\t<p>O valor atual é $value</p>\n";
                 }
             ?>
-        <script src="js/bootstrap.bundle.min.js"></script>r
+            <h2>For com vetor inedexado</h2>
+            <?php
+                for ($i=0; $i < count($vet2) ; $i++) { 
+                    echo "\t<p>O valor de ". $i+1 ." é {$vet2[$i]}</p>\n";
+                }
+            ?>
+            <h2>Foreach com vetor associativo</h2>
+            <?php
+            $vet_assoc = ["id"=>"id","nome" => "Tião","telefone" => "15997233488"];
+                foreach($vet_assoc as $key=> $value) { 
+                    echo "\t<p>O valor de $key do vetor \$vet_assoc é $value</p>\n";
+                }
+                 echo "\t<p>Valor avulso do vetor \$vet_assoc é {$vet_assoc['nome']}</p>\n";
+            ?>
+            <h2>Foreach com vetor associativo</h2>
+            <?php
+            $vet_assoc = ["id"=>"id","nome" => "Tião","telefone" => "15997233488"];
+                foreach($vet_assoc as $key=> $value) { 
+                    echo "\t<p>O valor de $key do vetor \$vet_assoc é $value</p>\n";
+                }
+                 echo "\t<p>Valor avulso do vetor \$vet_assoc é {$vet_assoc['nome']}</p>\n";
+            ?>
+        <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

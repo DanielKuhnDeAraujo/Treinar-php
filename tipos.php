@@ -27,4 +27,26 @@ echo "</p>";
 if (is_string($bool)) {
     echo "String: $bool";
 }
+
+
+
+$action = "show_version";
+$show_separators = true;
+
+// == É um operador que testa
+// igualdade e retorna um booleano.
+if ($action == "mostrar_versao") {
+    echo "A versão é 1.23";
+}
+
+// isto não é necessário ...
+if ($show_separadores == TRUE) {
+    echo "<hr>\n";
+}
+
+// ... porque pode simplesmente ser escrito assim:
+if ($show_separadores) {
+    echo "<hr>\n";
+}
 ?>
+
