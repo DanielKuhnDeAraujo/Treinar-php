@@ -120,6 +120,7 @@
                 $vet = ["Zeca","Pedreiro","15997233477"]; 
                 $vet2 = array ("Zeca","Pedreiro","15997233477",123);
                 $vet2[] = "itu";
+                array_push($vet2, ["SP",11111111]);
                 foreach ($vet as $value) {
                     echo "\t<p>O valor atual é $value</p>\n";
                 }
@@ -138,14 +139,35 @@
                 }
                  echo "\t<p>Valor avulso do vetor \$vet_assoc é {$vet_assoc['nome']}</p>\n";
             ?>
-            <h2>Foreach com vetor associativo</h2>
+            <h2>For com vetor bidimensional</h2>
             <?php
-            $vet_assoc = ["id"=>"id","nome" => "Tião","telefone" => "15997233488"];
-                foreach($vet_assoc as $key=> $value) { 
-                    echo "\t<p>O valor de $key do vetor \$vet_assoc é $value</p>\n";
+                // $cars = array (
+                //        array("Volvo", 22, 18),
+                //         array("BMW", 15, 13),
+                //         array("Saab", 5, 2),
+                //         array("Land Rover", 17, 15)
+                //         );   
+
+                $cars = [
+                       array("Volvo", 22, 18),
+                        array("BMW", 15, 13),
+                        array("Saab", 5, 2),
+                        array("Land Rover", 17, 15),
+                        123
+                        ];    
+                echo "\t<p>Valor avulso do vetor \$vet_assoc é {$cars[1][1]}</p>\n";
+                for ($i=0; $i < count($cars) ; $i++) { 
+                    if (is_array( $cars[$i] ) ) {
+                        for ($j=0; $j < count($cars[$i]); $j++) { 
+                            echo"\t<p> O valor de $i na posição $j do vetor \$cars é {$cars[$i][$j]}";
+                        }
+                    }
+                    else {
+                        echo"\t<p> O valor da posição $i do vetor \$cars é {$cars[$i]}";
+                    }
                 }
-                 echo "\t<p>Valor avulso do vetor \$vet_assoc é {$vet_assoc['nome']}</p>\n";
             ?>
+            
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
