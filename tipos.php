@@ -31,7 +31,7 @@ if (is_string($bool)) {
 
 
 $action = "show_version";
-$show_separators = true;
+$show_separadores = true;
 
 // == É um operador que testa
 // igualdade e retorna um booleano.
@@ -48,5 +48,21 @@ if ($show_separadores == TRUE) {
 if ($show_separadores) {
     echo "<hr>\n";
 }
+var_dump(PHP_INT_MAX + 1);  
+var_dump(PHP_INT_MIN);
+
+try {
+    intdiv(PHP_INT_MIN, -1);
+} catch (Error $e) {
+    echo get_class($e), ': ', $e->getMessage(), PHP_EOL;
+}
+
+try {
+    intdiv(1, 0);
+} catch (Error $e) {
+    echo get_class($e), ': ', $e->getMessage(), PHP_EOL;
+    // eol é quebra de linha
+}
+
 ?>
 

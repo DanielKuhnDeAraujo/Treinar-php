@@ -19,6 +19,10 @@
     <body>
         <h1>Variáveis e constantes PHP</h1>
         <?php
+            include "Fruta.php";
+            // include_once"";
+            // require_once"";
+            // require "";
             echo "<p>Hello World!</p>";
             // Comentário
             /* Comentário
@@ -166,8 +170,51 @@
                         echo"\t<p> O valor da posição $i do vetor \$cars é {$cars[$i]}";
                     }
                 }
-            ?>
             
+            ?>
+            <h2>Foreach com vetor associativo</h2>
+            <?php
+            $fruta1 = new Fruit();
+            $fruta2 = new Fruit();
+            $fruta1->setNome("Mamão");
+            $fruta1->setCor("Laranja");
+            $fruta2->setNome("Limão");
+            $fruta2->setCor("Verde");
+            $vet_frutas = [$fruta1, $fruta2];
+            foreach($vet_frutas as $obj) { 
+                echo "\t<p>{$obj->__toString()}</p>\n";
+            }
+            echo "\t<p>Nome avulso da posição 0 do vetor \$vet_frutas é {$vet_frutas[0]->getNome()}</p>\n";
+            echo "\t<p>Nome avulso da \$fruta2 é {$fruta2->getNome()}</p>\n";
+            ?>
+            <!-- sort() - sorts an indexed array in ascending order
+                rsort() - sorts an indexed array in descending order
+                asort() - sorts an associative array in ascending order, according to the value
+                ksort() - sorts an associative array in ascending order, according to the key
+                arsort() - sorts an associative array in descending order, according to the value
+                krsort() - sorts an associative array in descending order, according to the key -->
+            <!-- Aqui começa a azedar o pé do frango -->
+             <!-- $GLOBALS - An array that contains references to all global variables of the script
+                    $_SERVER - Holds information about the web server including headers, paths, and script locations
+                    $_REQUEST - An array containing data from $_GET, $_POST, and $_COOKIE superglobals
+                    $_POST - An array of variables received via the HTTP POST method
+                    $_GET - An array of variables received via the HTTP GET method
+                    $_FILES - An array of items uploaded to the current script via the HTTP POST method (filename, type, size)
+                    $_ENV - Holds environment variables passed to the current script
+                    $_COOKIE - An array of variables passed to the current script via HTTP Cookies
+                    $_SESSION - An array of session variables -->
+        <h2>Global $_SERVER</h2>
+        <?php
+        echo "<p>{$_SERVER['PHP_SELF']}</p>\n";
+        echo "<p>{$_SERVER['SERVER_NAME']}</p>\n";
+        echo "<p>{$_SERVER['HTTP_HOST']}</p>\n";
+        echo "<p>{$_SERVER['HTTP_REFERER']}</p>\n";
+        echo "<p>{$_SERVER['HTTP_USER_AGENT']}</p>\n";
+        echo "<p>{$_SERVER['SCRIPT_NAME']}</p>\n";
+        ?>
+        <h2>Global $_SERVER</h2>
+        <a href="dados.php?var1=lalala&var2=761331">Exemplo requisição GET</a>
+
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
