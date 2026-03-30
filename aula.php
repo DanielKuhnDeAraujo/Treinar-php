@@ -212,9 +212,27 @@
         echo "<p>{$_SERVER['HTTP_USER_AGENT']}</p>\n";
         echo "<p>{$_SERVER['SCRIPT_NAME']}</p>\n";
         ?>
-        <h2>Global $_SERVER</h2>
+        <h2>Global $_GET</h2>
         <a href="dados.php?var1=lalala&var2=761331">Exemplo requisição GET</a>
+        <h2>Global $_POST</h2>
+        <form action="dados.php?var=exemplo123" method="post" enctype="multipart/form-data">
+            <label for="nom">Nome:</label>
+            <input type="text" name="nome" id="nom" maxlength="50">
+            <br>
+            <label for="end">Nome:</label>
+            <input type="text" name="endereco" id="end" maxlength="50">
+            <br>
+            <label for="dtnasc">Data de Nascimento: </label>
+            <input type="date" name="datanasc" id="dtnasc" min="2012-01-01" max="2020-12-31"> <br>
+            <!--Ano mes dia-->
+            <label for="arquivo">Foto: </label>
+            <input type="file" accept="image/*" name="arq" id="arquivo">
 
+
+            <!-- Submit -->
+            <input type="submit" value="Gravar"><br>
+            <button type="submit">Mandar</button>
+        </form>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
