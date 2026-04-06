@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="centralizar bg-primary">
+        <div class="bg-light p-4  borde3r border-dark rounded ">
+            <div class="w-100 text-center text-primary">
+                <h1>Freelas Net</h1>
+                <p>Cadastre-se como freelancer</p>
+            </div>
+            <form action="dados.php" method="post" enctype="multipart/form-data">
+                    
+                    <label for="arquivo">Foto de perfil: </label>
+                    <input type="file" accept="image/*" name="arq" id="img-input">
+                    <img id="preview" src="">
+
+                    <!-- Submit -->
+                    <input type="submit" value="Gravar"><br>
+            </form>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
